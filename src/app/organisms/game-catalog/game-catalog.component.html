@@ -1,1 +1,8 @@
-<p>game-catalog works!</p>
+<div class="catalog">
+  <div class="banner">
+    <img src="url_del_banner_promocional" alt="Banner Promocional">
+  </div>
+  <app-sort-button (sortAscending)="sortGames('asc')" (sortDescending)="sortGames('desc')"></app-sort-button>
+  <app-game-list-container [games]="games"></app-game-list-container>
+</div>
+
