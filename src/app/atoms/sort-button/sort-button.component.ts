@@ -11,6 +11,17 @@ export class SortButtonComponent {
 
   constructor() { }
 
+  sortOrderChanged(event: Event) {
+    const selectedOption = (event.target as HTMLSelectElement).value;
+
+    if (selectedOption === 'asc') {
+     this.sortAscendingClicked();
+    } else if (selectedOption === 'desc') {
+      this.sortDescendingClicked();
+    }
+  }
+
+
   sortAscendingClicked(): void {
     this.sortAscending.emit();
   }
@@ -18,4 +29,5 @@ export class SortButtonComponent {
   sortDescendingClicked(): void {
     this.sortDescending.emit();
   }
+
 }

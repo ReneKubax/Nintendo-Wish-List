@@ -9,10 +9,12 @@ import { DataService } from '../../services/data.service';
 })
 export class GameCardComponent {
   @Input() game: any;
+  isClicked: boolean = false;
 
   constructor(private dataService: DataService) { }
 
   addToWishlist(): void {
     this.dataService.addToWishlist(this.game);
+    this.isClicked = !this.isClicked;
   }
 }

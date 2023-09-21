@@ -1,8 +1,21 @@
-<div class="catalog">
-  <div class="banner">
-    <img src="url_del_banner_promocional" alt="Banner Promocional">
+<div class="container catalog">
+  <app-game-navbar></app-game-navbar>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="col-md-12">
+      <img src="https://cdn.atomix.vg/wp-content/uploads/2016/10/nintendo-switch-banner.jpg" alt="Banner Promocional" class="img-fluid rounded">
+    </div>
   </div>
-  <app-sort-button (sortAscending)="sortGames('asc')" (sortDescending)="sortGames('desc')"></app-sort-button>
-  <app-game-list-container [games]="games"></app-game-list-container>
+  <div class="space"></div>
+  <div class="row">
+    <div class="col-md-12">
+      <app-sort-button (sortAscending)="sortGames('asc')" (sortDescending)="sortGames('desc')"></app-sort-button>
+    </div>
+    <div class="space"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <app-game-list-container [games]="games"></app-game-list-container>
+    </div>
+  </div>
+  <app-game-fooder></app-game-fooder>
 </div>
-

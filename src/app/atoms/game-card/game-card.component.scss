@@ -1,0 +1,20 @@
+.space {
+  margin-bottom: 50px;
+}
+/* styles.css o styles.scss */
+.heart-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.heart-button span {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.heart-button span.hidden {
+  transform: scale(0);
+}

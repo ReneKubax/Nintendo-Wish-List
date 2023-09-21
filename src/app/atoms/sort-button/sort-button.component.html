@@ -1,4 +1,7 @@
-<div class="sort-buttons">
-<button (click)="sortAscendingClicked()">Ordenar Ascendente</button>
-<button (click)="sortDescendingClicked()">Ordenar Descendente</button>
+<div class="sort-dropdown">
+  <label for="sort-order">Ordenar: </label>
+  <select id="sort-order" class="btn btn-secondary dropdown-toggle" (change)="sortOrderChanged($event)">
+    <option value="asc">Ascendente</option>
+    <option value="desc">Descendente</option>
+  </select>
 </div>
